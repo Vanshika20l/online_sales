@@ -1,24 +1,15 @@
-# online_sales
+**Online Sales Data Analysis**
 
-### Sample Data
-![Screenshot 2025-04-18 092210](https://github.com/user-attachments/assets/0c7f1bbe-6953-42cd-81a3-78044f39f7b2)
+## Introduction
+This repository includes a SQL script and a sample dataset designed for the analysis of online sales data. The focus of the analysis is on identifying trends in monthly revenue and order volume based on sales data from the first quarter of 2023.
 
-
- for Online Sales Analysis**
-
-```markdown
-# Online Sales Analysis
-
-## Overview
-This repository contains a SQL script and sample dataset for analyzing online sales data. The analysis focuses on monthly revenue and order volume trends based on sales data from the first quarter of 2023.
-
-## Dataset
-The dataset consists of sales records with the following fields:
-- **order_date**: The date when the order was placed (data type: DATE).
-- **amount**: The revenue generated from the order (data type: DECIMAL).
+## Dataset Description
+The dataset comprises sales records with the following attributes:
+- **order_date**: The date the order was placed (data type: DATE).
+- **amount**: The revenue generated from each order (data type: DECIMAL).
 - **product_id**: A unique identifier for each product (data type: INTEGER).
 
-### Sample Data
+### Example Data
 | order_date | amount | product_id |
 |------------|--------|------------|
 | 2023-01-15 | 150.00 | 101        |
@@ -28,14 +19,14 @@ The dataset consists of sales records with the following fields:
 | 2023-03-05 | 400.00 | 104        |
 | 2023-03-20 | 350.00 | 105        |
 
-## Setup Instructions
+## Instructions for Setup
 
-1. **Database Setup**:
-   - Choose a database management system (e.g., PostgreSQL, MySQL, SQLite).
-   - Create a new database for the analysis.
+1. **Database Configuration**:
+   - Select a database management system (e.g., PostgreSQL, MySQL, SQLite).
+   - Create a new database for conducting the analysis.
 
-2. **Create the Table**:
-   - Execute the following SQL command to create the `online_sales` table:
+2. **Table Creation**:
+   - Run the following SQL command to set up the `online_sales` table:
      ```sql
      CREATE TABLE online_sales (
          order_date DATE,
@@ -44,8 +35,8 @@ The dataset consists of sales records with the following fields:
      );
      ```
 
-3. **Insert Sample Data**:
-   - Insert the provided sample data into the `online_sales` table:
+3. **Inserting Sample Data**:
+   - Populate the `online_sales` table with the sample data provided:
      ```sql
      INSERT INTO online_sales (order_date, amount, product_id) VALUES
      ('2023-01-15', 150.00, 101),
@@ -56,8 +47,8 @@ The dataset consists of sales records with the following fields:
      ('2023-03-20', 350.00, 105);
      ```
 
-4. **Analyze Monthly Revenue and Order Volume**:
-   - Use the following SQL query to analyze the data:
+4. **Monthly Revenue and Order Volume Analysis**:
+   - Execute the following SQL query to analyze the data:
      ```sql
      SELECT 
          EXTRACT(YEAR FROM order_date) AS year,
@@ -74,11 +65,7 @@ The dataset consists of sales records with the following fields:
          year, month;
      ```
 
-## Results
-- The results of the analysis will provide insights into the total revenue and order volume for each month in the specified period.
-![Screenshot 2025-04-18 091028](https://github.com/user-attachments/assets/3a1bb2d9-ef22-44c6-a37b-f0e0fd900bd3)
-
-
-
-
+## Analysis Results
+- The output of this analysis will yield insights into the total revenue and order volume for each month within the specified timeframe.
+![Screenshot 2025-04-18 091028](https://github.com/user-attachments/assets/54324b4d-8a74-4c6d-af54-0c8d20dae481)
 
