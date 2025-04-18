@@ -1,5 +1,8 @@
 **Online Sales Data Analysis**
 
+![Screenshot 2025-04-18 092210](https://github.com/user-attachments/assets/61e6c080-e23b-4fa9-b2dc-a148cf55289c)
+
+
 ## Introduction
 This repository includes a SQL script and a sample dataset designed for the analysis of online sales data. The focus of the analysis is on identifying trends in monthly revenue and order volume based on sales data from the first quarter of 2023.
 
@@ -9,7 +12,7 @@ The dataset comprises sales records with the following attributes:
 - **amount**: The revenue generated from each order (data type: DECIMAL).
 - **product_id**: A unique identifier for each product (data type: INTEGER).
 
-### Example Data
+### Sample Data
 | order_date | amount | product_id |
 |------------|--------|------------|
 | 2023-01-15 | 150.00 | 101        |
@@ -57,8 +60,6 @@ The dataset comprises sales records with the following attributes:
          COUNT(DISTINCT product_id) AS order_volume
      FROM 
          online_sales
-     WHERE 
-         order_date >= '2023-01-01' AND order_date < '2023-04-01'
      GROUP BY 
          year, month
      ORDER BY 
